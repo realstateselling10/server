@@ -23,7 +23,7 @@ app.use(cookieParser())
 
 
 // Allow CORS for the frontend domain
-  res.setHeader('Access-Control-Allow-Origin', 'https://froentend-rho.vercel.app'); // Replace with the actual frontend URL
+  res.setHeader('Access-Control-Allow-Origin', 'https://froentend-6ux5puxxg-aavash-paudels-projects.vercel.app'); // Replace with the actual frontend URL
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
