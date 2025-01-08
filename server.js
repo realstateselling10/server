@@ -21,6 +21,13 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }))
 
 app.use(cookieParser())
 
+
+// Allow CORS for the frontend domain
+  res.setHeader('Access-Control-Allow-Origin', 'https://froentend-rho.vercel.app'); // Replace with the actual frontend URL
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL, // Your frontend URL
