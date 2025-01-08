@@ -24,10 +24,11 @@ app.use(cookieParser())
 
 
 
-app.use(cors({
-  origin: 'https://froentend-rho.vercel.app/' // Replace this with your frontend URL
-}));
-
+ app.use(cors({
+      origin: 'https://froentend-ipmdv4get-aavash-paudels-projects.vercel.app', // Or '*' for all
+ credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']    }));
 //Routes
 app.use('/api/admin', adminRoutes)
 app.use('/api/user', userRoutes)
