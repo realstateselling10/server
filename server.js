@@ -25,7 +25,7 @@ app.use(cookieParser())
 
 
 app.use(cors({
-  origin: 'https://froentend-rho.vercel.app' // Replace this with your frontend URL
+  origin: 'https://froentend-rho.vercel.app/' // Replace this with your frontend URL
 }));
 
 //Routes
