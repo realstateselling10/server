@@ -22,20 +22,11 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }))
 app.use(cookieParser())
 
 
-// Allow CORS for the frontend domain
-  res.setHeader('Access-Control-Allow-Origin', 'https://froentend-6ux5puxxg-aavash-paudels-projects.vercel.app'); // Replace with the actual frontend URL
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST,PUT,DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
 
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL, // Your frontend URL
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  })
-)
+app.use(cors({
+  origin: 'https://froentend-rho.vercel.app/' // Replace this with your frontend URL
+}));
 
 //Routes
 app.use('/api/admin', adminRoutes)
