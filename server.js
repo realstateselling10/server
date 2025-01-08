@@ -24,11 +24,14 @@ app.use(cookieParser())
 
 
 
- app.use(cors({
-      origin: 'https://froentend-ipmdv4get-aavash-paudels-projects.vercel.app', // Or '*' for all
- credentials: true,
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL, // Your frontend URL
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']    }));
+    allowedHeaders: ['Content-Type', 'Authorization']
+  })
+)
 //Routes
 app.use('/api/admin', adminRoutes)
 app.use('/api/user', userRoutes)
